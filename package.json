@@ -1,8 +1,8 @@
 {
   "name": "apidoc2postman",
-  "version": "1.0.0",
-  "license": "MPL-2.0",
-  "description": "A tool to generate Postman collections from apiDoc Inline Documentation",
+  "version": "1.0.1",
+  "license": "MIT",
+  "description": "📝  A tool to generate Postman collections from apiDoc Inline Documentation",
   "author": {
     "name": "Ruby Chen",
     "email": "dpg1133299@gmail.com",
@@ -17,12 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/dog1133299/apidoc2postman"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/dog1133299/apidoc2postman/issues"
   },
-  "homepage": "",
+  "homepage": "https://github.com/dog1133299/apidoc2postman",
   "bin": "bin/apidocPostman.js",
   "scripts": {
     "build:example": "./bin/apidocPostman.js -i example/ -o postman/ -c example/",
