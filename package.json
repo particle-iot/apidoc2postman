@@ -1,0 +1,44 @@
+{
+  "name": "apidoc2postman",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "description": "A tool to generate Postman collections from apiDoc Inline Documentation",
+  "author": {
+    "name": "Ruby Chen",
+    "email": "dpg1133299@gmail.com",
+    "url": "https://github.com/dpg1133299"
+  },
+  "keywords": [
+    "apidoc",
+    "postman",
+    "apidoc-postman",
+    "apidoc-to-postman",
+    "apidoc-2-postman"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "bin": "bin/apidocPostman.js",
+  "scripts": {
+    "build:example": "./bin/apidocPostman.js -i example/ -o postman/ -c example/",
+    "doc": "./bin/apidocPostman.js -i example/ -o postman/ -c example/",
+    "lint": "./node_modules/eslint/bin/eslint.js --ext .js . --fix"
+  },
+  "dependencies": {
+    "apidoc-core": "^0.15.0",
+    "commander": "^2.18.0",
+    "fs-extra": "^7.0.0",
+    "lodash": "^4.17.11",
+    "markdown-it": "^8.4.1",
+    "winston": "^2.4.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
