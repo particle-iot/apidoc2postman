@@ -43,7 +43,7 @@ const program = commander
   .option('-l, --line-ending <line-ending>', 'Turn off autodetect line-ending. Allowed values: LF, CR, CRLF.')
   .option('--encoding <encoding>', 'Set the encoding of the source code. [utf8].', 'utf8')
   .option('--sort, --sortby <sortby>', 'Api sort by <name|verbs|title>', 'verbs')
-
+  .option('--ef, --export-filename <export-filename>', 'export postman filename', 'postman')
   .parse(process.argv);
 
 /**
@@ -92,7 +92,8 @@ const options = {
   markdown: program.markdown,
   lineEnding: program.lineEnding,
   encoding: program.encoding,
-  sortby: program.sortby
+  sortby: program.sortby,
+  exportFilename: program.exportFilename,
 };
 
 if (apidocPostman.createCollection(options) === false) {
