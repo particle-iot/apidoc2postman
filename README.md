@@ -1,9 +1,10 @@
 # apidoc2postman
 
+![GitHub](https://img.shields.io/github/license/dog1133299/apidoc2postman)
+![npm](https://img.shields.io/npm/v/apidoc2postman)
+
 > Use [apiDoc](http://apidocjs.com/) to create a [Postman](https://www.getpostman.com) collection.
 
-
-![npm](https://img.shields.io/npm/v/apidoc2postman)
 
 
 This library uses the [apidoc-core](https://github.com/apidoc/apidoc-core) library.
