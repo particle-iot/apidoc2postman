@@ -1,11 +1,8 @@
 # apidoc2postman
 
-![GitHub](https://img.shields.io/github/license/dog1133299/apidoc2postman)
-![npm](https://img.shields.io/npm/v/apidoc2postman)
-
 > Use [apiDoc](http://apidocjs.com/) to create a [Postman](https://www.getpostman.com) collection.
 
-
+This version for the Particle API is forked from https://github.com/dog1133299/apidoc2postman
 
 This library uses the [apidoc-core](https://github.com/apidoc/apidoc-core) library.
 
@@ -30,7 +27,7 @@ E.g.
 
 ## Installation
 
-`npm install apidoc2postman`
+`npm install @particle/apidoc2postman`
 
 ## Features
 
@@ -67,9 +64,7 @@ Options:
 ```
 ### API URL
 
-Default would use the `base_url` environment variable you can specify the base URL of your APIs.
-
-If there is `sampleUrl` in `apidoc.json` or `package.json/apidoc` would replace it into file.
+Default would use the `url` environment variable you can specify the base URL of your APIs in `apidoc.json`.
 
 e.g.
 ```json
@@ -79,8 +74,6 @@ e.g.
   "description": "apidoc example project",
   "title": "Custom apiDoc browser title",
   "url" : "https://api.github.com/v1",
-  // setting url
-  "sampleUrl": "{{API_ROOT}}",
 
   "template": {
   	"withCompare": true,
@@ -135,6 +128,12 @@ will translate to the following template body
 | `point`    | `{Lat: 'value',Lng: 'value'}`         |
 | `object[]` | `[{ key: 'value' },{ key: 'value' }]` |
 
+## Auth
+
+If the description of an endpoint contains the string:
+* `does not require an access token`: the authorization for that endpoint will be set to `noauth`.
+
+Otherwise the endpoint will default to `bearer`.
 
 ## Example
 
@@ -166,7 +165,7 @@ node ./node_modules/apidoc2postman/bin/apidocPostman.js -i ./app -o ./export --e
 
 ```json
 {
-  "base_url": "https://localhost:5050"
+  "url": "https://localhost:5050"
 }
 ```
 
